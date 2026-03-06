@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Photography - Professional Portfolio</title>
+    <style>
+        /* Basic CSS for responsiveness and visual coherence */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x500/000000/FFFFFF?text=Stunning+Photography') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #333;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+        .about-image {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .portfolio-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .portfolio-item h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service-item h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .testimonials {
+            background: #e9e9e9;
+            padding: 40px 0;
+        }
+        .testimonial-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #555;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .testimonial-item footer {
+            font-weight: bold;
+            text-align: right;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 30px;
+        }
+
+        /* Basic Responsiveness */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text, .about-image {
+                min-width: unset;
+                width: 100%;
+            }
+            .portfolio-gallery, .services-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>RS Photography</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Capturing Moments, Creating Memories</h2>
+                <p>Your Vision, My Lens – Bringing Stories to Life.</p>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://figure.bohrium.com/300x300/CCCCCC/000000?text=Photographer" alt="RS Photography Profile">
+                </div>
+                <div class="about-text">
+                    <p>Welcome to RS Photography! I am a passionate and experienced photographer dedicated to capturing the essence of life's most precious moments. With X years of experience in the field, my specialization includes wedding, portrait, and event photography.</p>
+                    <p>My approach is to blend candid shots with carefully composed portraits, ensuring a diverse and heartfelt collection of images. I believe every client has a unique story, and it's my goal to tell that story through stunning visuals. I am committed to providing a professional, comfortable, and memorable photography experience from start to finish.</p>
+                    <p>Based in , I am available for assignments locally and internationally.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="container">
+            <h2>Portfolio</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Explore my work categorized by photography type.</p>
+
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="https://figure.bohrium.com/400x200/FF5733/FFFFFF?text=Wedding+Photo+1" alt="Wedding Photography Example 1">
+                    <h3>Weddings - Couple's Joy</h3>
+                    <p>Capturing the intimate moments and grand celebrations of your special day.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://figure.bohrium.com/400x200/33FF57/FFFFFF?text=Portrait+Photo+1" alt="Portrait Photography Example 1">
+                    <h3>Portraits - Professional Headshot</h3>
+                    <p>Creating striking individual and family portraits that reflect true personality.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://figure.bohrium.com/400x200/3357FF/FFFFFF?text=Event+Photo+1" alt="Event Photography Example 1">
+                    <h3>Events - Corporate Gala</h3>
+                    <p>Documenting corporate events, birthdays, and other significant gatherings with dynamic imagery.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://figure.bohrium.com/400x200/FFFF33/000000?text=Wedding+Photo+2" alt="Wedding Photography Example 2">
+                    <h3>Weddings - Ceremony</h3>
+                    <p>Every detail, every emotion, preserved beautifully.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://figure.bohrium.com/400x200/57FF33/FFFFFF?text=Portrait+Photo+2" alt="Portrait Photography Example 2">
+                    <h3>Portraits - Family Session</h3>
+                    <p>Timeless memories for families to cherish.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://figure.bohrium.com/400x200/5733FF/FFFFFF?text=Event+Photo+2" alt="Event Photography Example 2">
+                    <h3>Events - Live Concert</h3>
+                    <p>Vibrant and energetic coverage of live performances.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container">
+            <h2>Services Offered</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Tailored photography packages to suit your unique needs.</p>
+
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Wedding Photography</h3>
+                    <p>Comprehensive coverage of your wedding day, including pre-wedding shoots, ceremony, reception, and custom albums. Packages start from .</p>
+                    <ul>
+                        <li>Full-day coverage</li>
+                        <li>High-resolution digital images</li>
+                        <li>Online gallery</li>
+                        <li>Optional: Engagement session, printed albums</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Portrait Photography</h3>
+                    <p>Personalized sessions for individuals, couples, and families. Perfect for headshots, senior photos, and capturing family milestones. Sessions start from .</p>
+                    <ul>
+                        <li>1-2 hour session</li>
+                        <li>Multiple outfit changes</li>
+                        <li>Retouched images</li>
+                        <li>Optional: Location scouting, prints</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Event Photography</h3>
+                    <p>Professional documentation of corporate events, parties, conferences, and celebrations. Hourly rates available. Please inquire for a custom quote.</p>
+                    <ul>
+                        <li>Event coverage</li>
+                        <li>Candid and posed shots</li>
+                        <li>Prompt delivery of images</li>
+                        <li>Optional: On-site printing, video services</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Client Testimonials</h2>
+                <div class="testimonial-item">
+                    <p>"RS Photography captured our wedding day perfectly. The photos are absolutely stunning, and they were so professional and easy to work with!"</p>
+                    <footer>— Jane & John Doe</footer>
+                </div>
+                <div class="testimonial-item">
+                    <p>"The portrait session was fantastic! I felt so comfortable, and the final images exceeded my expectations. Highly recommend!"</p>
+                    <footer>— Emily R.</footer>
+                </div>
+                <div class="testimonial-item">
+                    <p>"For our corporate event, RS Photography delivered exceptional results. They captured the energy and importance of the day beautifully."</p>
+                    <footer>— Mark T., Event Coordinator</footer>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Ready to capture your special moments? Get in touch today!</p>
+                <p><strong>Email:</strong> info@rsphotography.com</p>
+                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                <address>
+                    <p><strong>Studio Address:</strong><br>
+                    123 Photography Lane<br>
+                    Creative City, PC 12345</p>
+                </address>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rsphotography" target="_blank" aria-label="Instagram">📸</a>
+                    <a href="https://www.facebook.com/rsphotography" target="_blank" aria-label="Facebook">👍</a>
+                    <a href="https://www.linkedin.com/in/rsphotography" target="_blank" aria-label="LinkedIn">🔗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 RS Photography. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
